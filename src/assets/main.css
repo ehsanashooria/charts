@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "SogoUi";
+  src: url(./Segoe.UI_p30download.com.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SogoUi";
+}
+body {
+  padding: 2rem;
+}
+:root {
+  --labels-from-input-margin: 10px;
+  --inputs-border-radius: 8px;
+  --inputs-border: 2px solid #6c75a76b;
+  --buttons-primary-color: #18bbee;
+  --light-primary-hover: rgba(0, 255, 255, 0.082);
+  --fast-transition: all 0.3s ease-out;
+  --secondary-color: #6c75a7;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.chart__title {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.main-part {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.main-part__chart,
+.main-part__inputs {
+  flex-basis: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* overflow-y: scroll; */
+}
+.main-part__chart {
+  max-height: 300px;
+}
+.each-controls {
+  width: 100%;
+}
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+.control {
+  margin-right: 20px;
+}
+.control__label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-right: var(--label-from-input-margin);
+}
+.control__input {
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: var(--fast-transition);
+  outline: none;
+  border: var(--inputs-border);
+  border-radius: var(--inputs-border-radius);
+  padding: 0.5rem 1rem;
+}
+.control__input:focus {
+  outline: none;
+  background-color: var(--light-primary-hover);
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.btn:focus {
+  outline: none;
+}
+.btn--add-control {
+  border: 3px solid var(--buttons-primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: var(--fast-transition);
+}
+.btn--add-control:hover {
+  background-color: var(--light-primary-hover);
+  cursor: pointer;
+}
+.btn--create-chart {
+  border: 3px solid var(--buttons-primary-color);
+  color: var(--buttons-primary-color);
+  padding: 0.5rem 1rem;
+  transition: var(--fast-transition);
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.btn--create-chart:hover {
+  background-color: var(--light-primary-hover);
+  cursor: pointer;
+}
+.plus-sign {
+  position: relative;
+  top: -14px;
+  color: var(--buttons-primary-color);
+}
+
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.list-leave-active {
+  position: absolute;
+}
+
+.img--example {
+  height: 400px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.chart__title + p{
+  margin-bottom: 50px;
+  width: 600px;
+  background-color: rgb(248 250 252);
+  padding: 15px;
+  padding-left: 40px;
+  border: 1px solid #3FB17E;
+  border-radius: 15px;
+  position: relative;
+  color: rgb(51 65 85);
+}
+.chart-main-word{
+  color: #359469;
+  
+}
+.ajab-sign{
+  width: 25px;
+  height: 25px;
+  top: 14px;
+  left: 10px;
+  position: absolute;
+}
